@@ -1,0 +1,220 @@
+
+
+#root {
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/**
+* Styling the food menu on the menu page
+*/
+.menu__menu-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto;
+}
+
+.sub-menu__icons {
+	width: 100%;
+	text-align: center;
+}
+.sub-menu__icons li {
+	list-style: none;
+}
+
+figure.item__image {
+	text-align: center;
+	border: 3px solid lightgrey;
+    padding: 3px;
+	margin-right: 10px;
+    margin-left: 10px;
+	transition: transform .2s; /* Animation */
+}
+figure.item__image:hover {
+	transform: scale(1.05);
+}
+
+.menu__item-details,
+.menu__item-description {
+	text-align: center;
+}
+
+/** Styling the form component **/
+
+h2.form-heading {
+	margin: auto;
+    padding-top: 50px;
+}
+.user-details {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border: 1px solid black;
+	padding: 20px;
+	max-width: 400px;
+	max-width: 800px;
+    width: 100%;
+    margin: 50px auto;
+  }
+
+  .form-field {
+	display: flex;
+	flex-direction: column;
+  }
+
+  .form-field button[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	font-size: 1em;
+	padding: 10px 24px;
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	width: 150px;
+	margin: 0 auto;
+	transition: background-color 0.3s;
+  }
+
+  .form-field input[type = "checkbox"] {
+	text-align: left;
+    width: 40px;
+  }
+
+  button[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	font-size: 1em;
+	padding: 10px 24px;
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	width: 150px;
+    margin: 0 auto;
+  }
+
+  .form-field input[type = "text"] {
+	padding: 10px;
+	margin-top: 10px;
+  }
+
+
+  button[type="submit"]:hover {
+	background-color: #45a049;
+  }
+
+  /**
+  * Styles for the navigation menu
+  **/
+
+  .header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f1f1f1;
+	height: 60px;
+  }
+
+  .menu ul {
+	list-style-type: none;
+	display: flex;
+	gap: 20px;
+	padding: 0;
+	margin: 0;
+  }
+
+  .menu a {
+	text-decoration: none;
+	color: #333;
+	position: relative;
+	display: inline-block;
+	transition: color 0.3s;
+  }
+
+  .menu a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #333;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+  }
+
+  .menu a:hover {
+	color: #555;
+  }
+
+  .menu a:hover::before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+  }
+
+ /**
+  * Media Queries
+ **/
+
+@media (min-width: 451px) {
+	.menu__menu-item {
+		flex-flow: row wrap;
+	}
+	.menu-item__container {
+		flex: 1 0 50%;
+	}
+}
+
+@media (min-width: 770px) {
+	.menu__menu-item {
+		justify-content: center;
+		width: 700px;
+	}
+	.menu-item__container {
+		flex: 1 1 50%;
+	}
+	.menu__item-description {
+		padding:0 30px;
+	}
+}
+
+@media (min-width: 850px) {
+	.menu__menu-item {
+		width: 800px;
+	}
+	.menu-item__container {
+		flex: 1 1 30%;
+	}
+}
+
+@media (min-width: 1100px) {
+	.menu__menu-item {
+		width: 1050px;
+	}
+
+}
+
+/**
+* Button styling on menu page
+*/
+button[name="orderbutton"] {
+	background-color: firebrick;
+	margin: 0 auto;
+	padding: 5px 20px;
+	display: block;
+}
